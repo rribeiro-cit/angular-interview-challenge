@@ -1,13 +1,13 @@
 <main>
   <section class="game">
     <div class="game-board">
-      <button *ngFor="let square of [1,2,3,4,5,6,7,8,9]" class="square"></button>
+      <button *ngFor="let square of puzzle, let i = index" class="square" (click)="onClick(i)"> {{square}} </button>
     </div>
     <div class="game-info">
       <div >
-        {{ status }}
+        {{ status }} {{ player ? 'x': 'o'}}
       </div>  
-      <button>Reset</button>
+      <button (click)="reset()">Reset</button>
     </div>
   </section>
 </main>
