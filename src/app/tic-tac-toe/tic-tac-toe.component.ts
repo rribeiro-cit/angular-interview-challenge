@@ -5,8 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './tic-tac-toe.component.html',
   styleUrls: ['./tic-tac-toe.component.css']
 })
+
 export class TicTacToeComponent implements OnInit {
   // private cleanPuzzle: string[] = ['', '', '', '', '', '', '', '', ''];
+
 
   public player: boolean;
   public status: string;
@@ -46,7 +48,19 @@ export class TicTacToeComponent implements OnInit {
   }
 
   checkGameStatus() {
+    if (this.puzzle[1] === this.puzzle[1]) {
 
+    }
   }
+  // Win cases
+  // row1 1, 2 , 3
+  // col1 1, 4 , 7
+  // x1 1, 5 , 9
 
+  // col3 3, 6 , 9
+  // x2 3, 5 , 7
+  // row2 3, 4 , 5
+
+  // col2 2, 5 , 8
+  // row3 7, 8 , 9
 }
